@@ -1,0 +1,21 @@
+.blogEntry {
+    width: 80%;
+    margin: auto;
+}
+
+.blogEntry h1 {
+    font-style: italic;
+    border: 0px solid black;
+    border-bottom-width: 2px;
+    margin-bottom: 0px;
+}
+
+.blogEntry h2 {
+    font-size: larger;
+    margin: 5px 0px;
+}
+
+.blogEntry p {
+    width: 90%;
+    margin: auto;
+}
