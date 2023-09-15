@@ -1,7 +1,7 @@
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="css/default.css">
-        <title>Brad Dial's Thoughts</title>
+        <title>Brad Dial's Web Apps</title>
     </head>
     <body>
         <?php include 'objects/siteHeader.html'; ?>

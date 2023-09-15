@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/blog.css">
@@ -17,7 +17,9 @@
                     <br><p>Consider this my resume. My portfolio. Soon enough this site will come to represent as much of my skill as I can display in multimedia. If you want to know what I'm capable of, you'll come here. If you want to know me as a person, you'll come here. A bit egocentric, maybe, but that's what selling yourself is all about. Stay tuned, there's gonna be more. If I've shown you this site while this is the only blog post, then hi mom!</p>
                 </div>
             </div>
+
+            <?php include 'objects/siteFooter.html'; ?>
         </div>
-        <?php include 'objects/siteFooter.html'; ?>
+
     </body>
 </html>

@@ -15,7 +15,6 @@ html, body {
 .header {
     margin: 0px;
     padding: 1px;
-    width: 100%;
     background-color: rgb(50, 65, 70);
     color: white;
     border: 0px solid rgb(224, 224, 224);
