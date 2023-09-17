@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="/css/default.css">
-        <title>Brad Dial - Budding Web Developer</title>
+        <title>Error 404</title>
     </head>
     <body>
         <div class="page">
