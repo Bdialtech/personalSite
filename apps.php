@@ -9,8 +9,9 @@
     </head>
     <body>
         <div class="page">
+        <?php include 'objects/siteHeader.php'; ?>
             <div class="content">
-                <?php include 'objects/siteHeader.php'; ?>
+               
 
                 <p style="font-style: italic; text-align: center;">All apps will open in a new tab</p>
                 <table class="appList">

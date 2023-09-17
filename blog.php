@@ -9,9 +9,8 @@
     </head>
     <body>
         <div class="page">
-            <div class="content">
-                <?php include 'objects/siteHeader.php'; ?>
-                <div class="blogEntry">
+        <?php include 'objects/siteHeader.php'; ?>
+            <div class="content"> <div class="blogEntry">
                     <h1>Coming Online</h1>
                     <h2>September 10 2023</h2>
                     <br><p>You know, making a website is pretty hard. Could you guess? I suppose there's easier options than the one I took. WordPress, site builders, the like. Nope, I went out of my way to get a headless Ubuntu machine and Git some raw files into it. I'm not sure why I'm the way I am, but it feels nice to get everything working - transparently, above all else. That's one thing I don't like, I hate magic tricks, especially in tech.</p>
@@ -21,7 +20,7 @@
                 </div>
             </div>
 
-            <?php include 'objects/siteFooter.php'; ?>
+        <?php include 'objects/siteFooter.php'; ?>
         </div>
 
     </body>

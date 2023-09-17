@@ -8,8 +8,9 @@
     </head>
     <body>
         <div class="page">
+        <?php include 'objects/siteHeader.php'; ?>
             <div class="content">
-                <?php include 'objects/siteHeader.php'; ?>
+               
                 I'm cool :) like really cool wow fr
             </div>
 

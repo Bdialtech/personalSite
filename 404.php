@@ -8,8 +8,9 @@
     </head>
     <body>
         <div class="page">
+        <?php include 'objects/siteHeader.php'; ?>
             <div class="content">
-                <?php include 'objects/siteHeader.php'; ?>
+               
 
                 <h1>Error 404: The requested page doesn't exist.</h1>
             </div>
