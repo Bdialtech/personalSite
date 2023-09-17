@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Rimworld Resource Calculator</title>
         <style>
             body {
