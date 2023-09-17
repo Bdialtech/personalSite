@@ -1,0 +1,19 @@
+# Rules to update in apache2.conf:
+# Line 170: <Directory /var/www/>
+#            	Options Indexes FollowSymLinks
+#	   --->     AllowOverride All
+#	            Require all granted
+#           </Directory>
+
+RewriteEngine On
+RewriteBase /
+
+# Remove file extensions for existing files with .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+# Redirect nonexistent requests to a 404 page
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ 404.php [L]

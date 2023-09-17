@@ -1,7 +1,7 @@
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="css/default.css">
-        <link rel="stylesheet" href="css/blog.css">
+        <link rel="stylesheet" href="/css/default.css">
+        <link rel="stylesheet" href="/css/blog.css">
         <title>Brad Dial's Thoughts</title>
     </head>
     <body>
