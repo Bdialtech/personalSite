@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <?php $lastModify = filemtime(__FILE__); ?>
         <meta charset="utf-8">
         <link rel="stylesheet" href="/css/default.css">
         <link rel="stylesheet" href="/css/apps.css">
@@ -9,7 +10,7 @@
     <body>
         <div class="page">
             <div class="content">
-                <?php include 'objects/siteHeader.html'; ?>
+                <?php include 'objects/siteHeader.php'; ?>
 
                 <p style="font-style: italic; text-align: center;">All apps will open in a new tab</p>
                 <table class="appList">
@@ -31,7 +32,7 @@
 
             </div>
 
-            <?php include 'objects/siteFooter.html'; ?>
+            <?php include 'objects/siteFooter.php'; ?>
         </div>
     </body>
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <?php $lastModify = filemtime(__FILE__); ?>
         <meta charset="utf-8">
         <link rel="stylesheet" href="/css/default.css">
         <link rel="stylesheet" href="/css/blog.css">
@@ -9,7 +10,7 @@
     <body>
         <div class="page">
             <div class="content">
-                <?php include 'objects/siteHeader.html'; ?>
+                <?php include 'objects/siteHeader.php'; ?>
                 <div class="blogEntry">
                     <h1>Coming Online</h1>
                     <h2>September 10 2023</h2>
@@ -20,7 +21,7 @@
                 </div>
             </div>
 
-            <?php include 'objects/siteFooter.html'; ?>
+            <?php include 'objects/siteFooter.php'; ?>
         </div>
 
     </body>

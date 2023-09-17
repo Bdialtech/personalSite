@@ -2,7 +2,7 @@
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
-    width: 60%;
+    min-width: 80%;
     margin: auto;
     margin-top: 2%;
 }

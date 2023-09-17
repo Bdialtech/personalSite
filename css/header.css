@@ -1,0 +1,68 @@
+header { 
+    position: sticky;
+    top: 0;
+    margin: 0px;
+    padding: 1px;
+    background-color: rgb(50, 65, 70);
+    color: white;
+    border: 0px solid rgb(224, 224, 224);
+    border-bottom-width: 5px;
+}
+
+.headerItem {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin: 0.5rem 15px;
+    text-shadow: black 3px 3px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.headerItem a:link, .headerItem a:visited, .headerItem a:hover, .headerItem a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.headerItem:hover, #navMenu:hover{
+    animation-name: hoverBob;
+    animation-duration: 200ms;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+#dropdownNavList {
+    display: none;
+}
+
+#navMenuButton {
+    position: relative;
+    display: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin: 3px;
+    background: url(/assets/icons/menuIcon.png);
+    border: 0px;
+}
+
+@keyframes hoverBob {
+    0% {left: 0px; top: 0px; text-shadow: black 3px 3px;}
+    100% {left: -3px; top: -3px; text-shadow: rgb(41, 41, 41) 6px 6px;}
+}
+
+@media screen and (max-width: 768px) {
+    #navList {
+      display: none;
+    }
+  
+    #navMenuButton {
+      display: block;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #dropdownNavList {
+        display: none;
+    }
+}
