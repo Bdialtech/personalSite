@@ -4,7 +4,7 @@
         <?php $lastModify = filemtime(__FILE__); ?>
         <meta charset="utf-8">
         <link rel="stylesheet" href="/css/default.css">
-        <title>Brad Dial - Who Am I?</title>
+        <title>Brad Dial - What's This Site?</title>
     </head>
     <body>
         <div class="page">
