@@ -15,3 +15,8 @@
     font-style: italic;
     font-size: small;
 }
+
+.footer a:link, .footer a:visited, .footer a:hover, .footer a:active {
+    text-decoration: underline;
+    color: lightgray;
+}
