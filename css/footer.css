@@ -1,11 +1,13 @@
 .footer {
-    position: absolute;
+    position: relative;
+    flex: 1;
     bottom: 0;
     width: 100%;
     height: fit-content;
     background-color: rgb(30, 45, 50);
     color: lightgray;
     padding: 2px 0px;
+    max-height: fit-content;
 }
 
 .footer p {

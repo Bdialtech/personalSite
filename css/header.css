@@ -33,6 +33,28 @@ header {
 
 #dropdownNavList {
     display: none;
+    margin: 0px auto;
+    width: 100vw;
+}
+
+#dropdownNavList ul, li {
+    margin: 0px auto;
+    padding: 0;
+    max-width: 100%;
+    text-align: left;
+}
+
+#dropdownNavList ul {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(0,0,0,0.15);
+}
+
+#dropdownNavList li {
+    padding: 10px;
+    background-color: rgba(0,0,0,0.15);
+    width: fit-content;
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
 #navMenuButton {
