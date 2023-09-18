@@ -26,7 +26,7 @@
                         <td><button type="button" class="appLauncher" onclick='window.open("/app/rimcalc", "_blank");'>Launch</button></td>
                         <td>RimCalc</td>
                         <td>A simple weekly value tracker for RimWorld</td>
-                        <td>R. Nolan</td>
+                        <td>RJ Carter</td>
                         <td>August 2023</td>
                     </tr>
                 </table>
