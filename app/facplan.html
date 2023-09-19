@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Factorio Planner</title>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            #view {
+                position: fixed;
+            }
+            #panel {
+                position: fixed;
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="page">
+            <canvas id="view" width="100vh" height="100vh"></canvas>
+            <div id="panel">
+                <button id="debugScaleUp" onclick="scale(5)">Scale Up</button>
+                <button id="debugScaleDown" onclick="scale(-5)">Scale Down</button>
+            </div>
+        </div>
+
+        <script>
+        //DOM Hooks
+            viewport = document.getElementById("view");
+
+        //Viewport variables
+            viewport.width = window.innerWidth;
+            viewport.height = window.innerHeight;
+
+            ctx = viewport.getContext("2d");
+
+            gridPosX = 0;
+            gridPosY = 0;
+            //Size of grid cells in pixels
+            gridScale = 25;
+            gridScaleMax = 100;
+            gridScaleMin = 15;
+
+            panning = false;
+            sensitivity = 1;
+            mouseDownX = -1;
+            mouseDownY = -1;
+
+        //Logic Variables
+
+        //Event Listeners
+            window.addEventListener("resize", resizeCanvas);
+            viewport.addEventListener("mousedown", (event) => {
+                panning = true;
+                mouseDownX = event.clientX;
+                mouseDownY = event.clientY;
+            });
+            viewport.addEventListener("mouseup", (event) => {
+                panning = false;
+            });
+            viewport.addEventListener("mousemove", (event) => {
+                if (panning) {
+                    gridPosX += (event.clientX - mouseDownX) / sensitivity;
+                    gridPosY += (event.clientY - mouseDownY) / sensitivity;
+                    mouseDownX = event.clientX;
+                    mouseDownY = event.clientY;
+                    clearCanvas();
+                    draw();
+                }
+            });
+            viewport.addEventListener("mouseout", (event) => {
+                panning = false;
+            });
+
+        //Objects
+            class transfer {
+                constructor (name, rate) {
+                    //String of item
+                    this.name = name;
+                    //Speed of transfer in items per second
+                    this.rate = rate;
+                }
+            }
+
+            class grid {
+                constructor (cells) {
+                    //Array of gridCells
+                    this.cells = cells;
+                }
+                cell(posx, posy) {
+
+                }
+            }
+
+            class gridCell {
+                constructor (contents, isRenderAnchor) {
+                    //Points to object
+                    //For machines larger than 1x1 cell, many cells in a square will point to one object
+                    this.contents = contents;
+                    //Whether the cell manages rendering of a component
+                    //For cells contained in machines larger than 1x1 cell, this will not always be true
+                    this.isRenderAnchor = isRenderAnchor;
+                }
+            }
+
+            class belt {
+                constructor (dir, side1Object, side1Rate, side2Object, side2Rate, beltSpeed) {
+                    //1 = north, 2 = east, 3 = south, 4 = west
+                    this.dir = dir;
+                    //String values for sides
+                    this.side1Object = side1Object;
+                    this.side2Object = side2Object;
+                    //Items/second per side
+                    this.side1Rate = side1Rate;
+                    this.side2Rate = side2Rate;
+                    //Items/second total
+                    this.beltSpeed = beltSpeed;
+                }
+            }
+
+            class inserter {
+                constructor (dir, pullingFrom, pushingTo, rate) {
+                    //Contents move: 1 = north, 2 = east, 3 = south, 4 = west
+                    this.dir = dir;
+                    //Object pointer
+                    this.pullingFrom = pullingFrom;
+                    //Object pointer
+                    this.pushingTo = pushingTo;
+                    //Items/second pushed
+                    this.rate = rate;
+                }
+            }
+
+            class machine {
+                constructor (inputs, outputs, operationRate, speedBonus, prodBonus, effBonus) {
+                    //Recipe inputs array
+                    //Format: [{Object string:count per operation},{Object string:count per operation}]
+                    this.inputs = inputs;
+                    //Recipe outputs array
+                    //Format: [{Object string:count per operation},{Object string:count per operation}]
+                    this.outputs = outputs;
+                    //How quickly a recipe is completed
+                    this.operationRate = operationRate;
+                    this.speedBonus = speedBonus;
+                    this.prodBonus = prodBonus;
+                    this.effBonus = effBonus;
+                }
+            }
+
+            class inventory {
+                constructor (inputs, outputs) {
+
+                }
+            }
+
+        //Launch instructions
+            draw();
+
+
+        //Change canvas dimensions as screen resizes
+            function resizeCanvas() {
+                clearCanvas();
+                viewport.width = window.innerWidth;
+                viewport.height = window.innerHeight;
+                draw();
+            }
+
+            function clearCanvas () {
+                ctx = viewport.getContext("2d");
+                ctx.clearRect(0, 0, viewport.width, viewport.height);
+            }
+
+            function debugDraw() {
+                ctx = viewport.getContext("2d");
+                ctx.moveTo(0, 0);
+                ctx.lineTo(viewport.width, viewport.height);
+                ctx.stroke();
+            }
+
+        //Painter's function for drawing elements
+        //Order: Grid -> Entities -> Symbols -> Text
+            function draw() {
+                gridScale = Math.round(gridScale);
+                ctx = viewport.getContext("2d");
+                ctx.strokeStyle = "#bbbbbb";
+                ctx.lineWidth = 1;
+
+                // Draw vertical grid lines
+                for (drawX = gridPosX % gridScale; drawX < viewport.width; drawX += gridScale) {
+                    ctx.beginPath();
+                    ctx.moveTo(drawX, 0);
+                    ctx.lineTo(drawX, viewport.height);
+                    ctx.stroke();
+                }
+    
+                // Draw horizontal grid lines
+                for (drawY = gridPosY % gridScale; drawY < viewport.height; drawY += gridScale) {
+                    ctx.beginPath();
+                    ctx.moveTo(0, drawY);
+                    ctx.lineTo(viewport.width, drawY);
+                    ctx.stroke();
+                }
+
+
+            }
+            
+        //Scales the grid up or down. dir will be true if scaling up, false if scaling down
+            function scale(delta) {
+                curGridScale = gridScale;
+                gridScale += delta;
+
+                if (gridScale > gridScaleMax) gridScale = gridScaleMax;
+                if (gridScale < gridScaleMin) gridScale = gridScaleMin;
+
+                if (curGridScale != gridScale) {
+                    clearCanvas();
+                    draw();
+                }
+            }
+        </script>
+    </body>
+</html>
