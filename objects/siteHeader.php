@@ -12,10 +12,9 @@
     <button class="headerItem" id="navMenuButton" onclick="toggleDropdownVisibility();" aria-label="Navigation"></button>
     <nav id="dropdownNavList">
         <ul>
-            <li class="headerItem" style="display: block;"><a href="/">Home</a></li>
+            <li class="headerItem" style="display: block;"><a href="/">About Me</a></li>
             <li class="headerItem" style="display: block;"><a href="/blog">Blog</a></li>
             <li class="headerItem" style="display: block;"><a href="/apps">Apps</a></li>
-            <li class="headerItem" style="display: block;"><a href="/aboutme">About Me</a></li>
             <li class="headerItem" style="display: block;"><a href="/aboutsite">About The Site</a></li>
         </ul>
     </nav>
