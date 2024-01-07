@@ -44,6 +44,7 @@
                 border-color: black;
                 border-style: solid;
                 padding-bottom: 2px;
+                cursor: help;
             }
             .panel {
                 background-color: rgba(211, 211, 211, 0.2);
@@ -80,6 +81,9 @@
 
         <div class="content">
             <div class="panel">
+                <p>Supply input data for resources you would like to track.</p>
+                <p>Step week forward or backward to apply changes to all resources at once.</p>
+                <br>
                 <table style="width:90%; margin:auto">
                     <th style="width:50%"><input type="button" id="stepBack" value="Step Week Back" class="weekStepButton" onclick="output(0)" style="width:100%"></th>
                     <th style="width:50%"><input type="button" id="stepForward" value="Step Week Forward" class="weekStepButton" onclick="output(1)" style="width:100%"></th>
@@ -93,7 +97,7 @@
                         <th title="How much weekly input is there of this item?">In</th>
                         <th title="How much weekly consumption is there of this item?">Out</th>
                         <th title="How much of this item is net every week? This is derived from your input and output, you don't fill this one in yourself.">Net</th>
-                        <th title="How much of this item do you currently have?">Stock</th>
+                        <th title="How much of this item do you currently have? Updated automatically after stepping weeks.">Stock</th>
                         <th></th>
                     </tr>
                 </thead>
