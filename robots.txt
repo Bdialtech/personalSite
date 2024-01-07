@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /objects
+Disallow: /js
+Disallow: /css
+Disallow: /assets
+Disallow: /app
+Disallow: /404.php
