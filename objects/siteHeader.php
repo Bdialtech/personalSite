@@ -3,10 +3,9 @@
 <header>
     <nav id="navList">
         <ul>
-            <li class="headerItem"><a href="/">Home</a></li>
+            <li class="headerItem"><a href="/">About Me</a></li>
             <li class="headerItem"><a href="/blog">Blog</a></li>
             <li class="headerItem"><a href="/apps">Apps</a></li>
-            <li class="headerItem"><a href="/aboutme">About Me</a></li>
             <li class="headerItem"><a href="/aboutsite">About The Site</a></li>
         </ul>
     </nav>
