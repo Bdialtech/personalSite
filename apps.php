@@ -3,6 +3,8 @@
     <head>
         <?php $lastModify = filemtime(__FILE__); ?>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Brad Dial's apps and programs that are available for viewing">
         <link rel="stylesheet" href="/css/default.css">
         <link rel="stylesheet" href="/css/apps.css">
         <title>Brad Dial's Web Apps</title>
