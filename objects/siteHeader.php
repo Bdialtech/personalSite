@@ -9,7 +9,7 @@
             <li class="headerItem"><a href="/aboutsite">About The Site</a></li>
         </ul>
     </nav>
-    <button class="headerItem" id="navMenuButton" onclick="toggleDropdownVisibility();"></button>
+    <button class="headerItem" id="navMenuButton" onclick="toggleDropdownVisibility();" aria-label="Navigation"></button>
     <nav id="dropdownNavList">
         <ul>
             <li class="headerItem" style="display: block;"><a href="/">Home</a></li>
