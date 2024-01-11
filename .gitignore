@@ -1,3 +1,5 @@
 phptest.php
 foundme.txt
 bootstraptest.php
+SQLconnect.php
+SQLdisconnect.php
