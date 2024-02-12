@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<?php include $_SERVER['DOCUMENT_ROOT'].'/objects/SQLconnect.php'; ?>
+
 <html lang="en">
     <head>
         <?php $lastModify = filemtime(__FILE__); ?>
@@ -27,3 +30,5 @@
 
     </body>
 </html>
+
+<?php include $_SERVER['DOCUMENT_ROOT'].'/objects/SQLdisconnect.php'; ?>

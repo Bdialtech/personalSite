@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="page">
-        <?php include 'objects/siteHeader.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteHeader.php'; ?>
 
             <div class="content">
                 <h2>Abstract</h2>
@@ -25,7 +25,7 @@
                 <p>Eventually, as I learn more tools and have the time to implement them, more and more less essential components will be added solely to show my capacity in working with them. These things include containerization tools like Docker, frameworks like Bootstrap and React, and a more modern back-end, such as Node.js.</p>
             </div>
 
-            <?php include 'objects/siteFooter.php'; ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteFooter.php';?>
         </div>
     </body>
 </html>

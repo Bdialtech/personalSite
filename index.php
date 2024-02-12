@@ -10,14 +10,14 @@
     </head>
     <body>
         <div class="page">
-        <?php include 'objects/siteHeader.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteHeader.php'; ?>
 
             <div class="content">
                 <h2>Who am I?</h2>
                 <p>I'm Bradley Dial, aspiring web developer and recent graduate from Pellissippi State Community College in Knoxville, Tennessee.</p>
             </div>
 
-            <?php include 'objects/siteFooter.php';?>
+        <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteFooter.php';?>
         </div>
     </body>
 </html>
