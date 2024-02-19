@@ -5,7 +5,7 @@
         <ul>
             <li class="headerItem"><a href="/">About Me</a></li>
             <li class="headerItem"><a href="/blog">Blog</a></li>
-            <li class="headerItem"><a href="/apps">Apps</a></li>
+            <li class="headerItem"><a href="/app">Apps</a></li>
             <li class="headerItem"><a href="/aboutsite">About The Site</a></li>
         </ul>
     </nav>
