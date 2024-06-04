@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php include $_SERVER['DOCUMENT_ROOT'].'/objects/SQLconnect.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLconnect.php'; ?>
 
 <html lang="en">
     <head>
@@ -31,4 +31,4 @@
     </body>
 </html>
 
-<?php include $_SERVER['DOCUMENT_ROOT'].'/objects/SQLdisconnect.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLdisconnect.php'; ?>
