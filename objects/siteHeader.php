@@ -13,7 +13,7 @@
         <ul>
             <li class="headerItem" style="display: block;"><a href="/">Home</a></li>
             <li class="headerItem" style="display: block;"><a href="/blog">Blog</a></li>
-            <li class="headerItem" style="display: block;"><a href="/apps">Apps</a></li>
+            <li class="headerItem" style="display: block;"><a href="/app">Apps</a></li>
             </ul>
     </nav>
 </header>
