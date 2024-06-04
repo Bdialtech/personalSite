@@ -1,34 +1,79 @@
 <!DOCTYPE html>
-
-<?php include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLconnect.php'; ?>
-
 <html lang="en">
     <head>
         <?php $lastModify = filemtime(__FILE__); ?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Brad Dial's blog">
+        <meta name="description" content="Blog viewing for Brad Dial's website">
         <link rel="stylesheet" href="/css/default.css">
         <link rel="stylesheet" href="/css/blog.css">
         <title>Brad Dial's Thoughts</title>
     </head>
     <body>
         <div class="page">
-        <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteHeader.php'; ?>
-            <div class="content"> <div class="blogEntry">
-                    <h1>Coming Online</h1>
-                    <h2>September 10 2023</h2>
-                    <br><p>You know, making a website is pretty hard. Could you guess? I suppose there's easier options than the one I took. WordPress, site builders, the like. Nope, I went out of my way to get a headless Ubuntu machine and Git some raw files into it. I'm not sure why I'm the way I am, but it feels nice to get everything working - transparently, above all else. That's one thing I don't like, I hate magic tricks, especially in tech.</p>
-                    <br><p>Welcome to the site. There's not much here yet, but over time, there will be. Right now it's just a couple HTML files made to serve a function but eventually things are gonna be really pretty around here, with toy databases and fake data to mess around with. Even this blog is gonna be dynamically served. This is gonna be my slice of the internet, my style. Who knows, maybe I'll learn how to embed a Unity Engine project and put a game up here.</p>
-                    <br><p>Who am I, anyway? I'm Brad, a recent graduate from Pellissippi State Community College in Tennessee. Tech is my thing, specifically programming apps. I like working on a lower level, doing things with object oriented languages like Java or C#, but you need a much more expensive degree to do those kinds of things for people so I turned my eye to the web development space. And on that topic, that's entirely why my little corner of the web is here in the first place.</p>
-                    <br><p>Consider this my resume. My portfolio. Soon enough this site will come to represent as much of my skill as I can display in multimedia. If you want to know what I'm capable of, you'll come here. If you want to know me as a person, you'll come here. A bit egocentric, maybe, but that's what selling yourself is all about. Stay tuned, there's gonna be more. If I've shown you this site while this is the only blog post, then hi mom!</p>
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteHeader.php'; ?>
+
+            <?php 
+                include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLconnect.php';
+
+                $currentPage = 1;
+                if (isset($_GET['page'])) {
+                    $currentPage = htmlspecialchars($_GET['page']);
+                }
+
+                $totalPages = 1;
+                include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLblogCalcPageCount.php';
+            ?>
+
+            <div class="content">       
+                <div class="blogInterface">
+                    <div class="blogPanel">
+                        <p>Sorting and filtering functionality coming soon!</p>
+                        <br>
+                        <form>
+                            <label for="sortType">Sort By:</label><br>
+                            <select id="sortType" name="sortType">
+                                <option value="date" selected>By Date</option>
+                                <option value="alpha">By Title</option>
+                            </select><br>
+                            <select id="sortDir" name="sortDir">
+                                <option value="asc">Ascending</option>
+                                <option value="desc" selected>Descending</option>
+                            </select><br><br>
+                            <label>Tags:</label><br>
+                            <input type="checkbox" id="update" name="update" value="Update" checked>
+                            <label for="tech">Site Updates </label><br>
+                            <input type="checkbox" id="tech" name="tech" value="Tech" checked>
+                            <label for="tech">Tech </label><br>
+                            <input type="checkbox" id="journal" name="journal" value="Journal" checked>
+                            <label for="tech">Journal </label><br>
+                            <input type="checkbox" id="game" name="game" value="Game" checked>
+                            <label for="tech">Games </label><br>
+                            <input type="checkbox" id="philo" name="philo" value="Philo" checked>
+                            <label for="tech">Philosophy </label><br><br>
+                            <input type="submit" id="submit" value="Apply" disabled>
+                        </form>
+                    </div>
+
+                    <div class="blogView">
+                        <div class="blogNavigation">
+                            <ul>
+                                <li><button <?php if ($currentPage <= 1) echo "disabled"; ?> onclick="window.location.href = '../blog/index.php?page=1'">First</button></li>
+                                <li><button <?php if ($currentPage <= 1) echo "disabled"; ?> onclick="window.location.href = '../blog/index.php?page=<?php echo $currentPage - 1;?>'">Previous</button></li>
+                                <li><button <?php if ($currentPage >= $totalPages) echo "disabled"; ?> onclick="window.location.href = '../blog/index.php?page=<?php echo $currentPage + 1; ?>'">Next</button></li>
+                                <li><button <?php if ($currentPage >= $totalPages) echo "disabled"; ?> onclick="window.location.href = '../blog/index.php?page=<?php echo $totalPages; ?>'">Last</button></li>
+                            </ul>
+                            <p><?php echo "Page " . $currentPage . " of " . $totalPages; ?></p>
+                        </div>
+
+                        <div class="blogText">
+                            <?php include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLblogRenderEntries.php'; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-        <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteFooter.php'; ?>
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteFooter.php';?>
         </div>
-
     </body>
 </html>
-
-<?php include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLdisconnect.php'; ?>

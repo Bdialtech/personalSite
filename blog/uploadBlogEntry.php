@@ -6,7 +6,7 @@
 
         include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLconnect.php';
 
-        include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLupload.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLblogUpload.php';
 
         include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLdisconnect.php';
 
