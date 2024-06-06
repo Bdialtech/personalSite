@@ -7,16 +7,6 @@
         <meta name="description" content="Landing page; about Brad Dial">
         <link rel="stylesheet" href="/css/default.css">
         <title>Brad Dial - The Website</title>
-        <style>
-            #whoAmBlock {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content: space-between;
-                width: 90%;
-                margin: auto;
-            }
-        </style>
     </head>
     <body>
         <div class="page">
@@ -33,14 +23,14 @@
                     <h1>Structure</h1>
                     <p>Currently this website is built to purpose - that is to say there's few frills and most things are built from the ground up with as few infrastructures as possible. The majority of the HTML, CSS, and Javascript is completely homebrew, and the stack is as simple as it gets: a LAMP stack.</p>
                     <br>
-                    <p>In this case, specifically, the stack is Linux (Ubunutu), Apache, MySQL, and PHP. The webserver is hosted remotely on an AWS Lightsail Ubuntu machine, and the codebase is hosted on GitHub for version control and rapid deployment, as most production happens on a separate development environment.</p>
+                    <p>In this case, specifically, the stack is Linux (Ubuntu), Apache, MySQL, and PHP. The web server is hosted remotely on an AWS Lightsail Ubuntu machine, and the codebase is hosted on GitHub for version control and rapid deployment, as most production happens on a separate development environment.</p>
                     <br>
                     <p>Although security isn't exactly a business-critical risk factor for my personal blog site, I have taken basic measures. Despite the codebase being largely public (available <a href="https://github.com/Bdialtech/personalSite/tree/main">here</a>), there are some particular safety precautions I took when implementing my site's database. For example, all MySQL implementation code has been encapsulated into a private Git submodule - the /restricted directory - and then re-injected using PHP's include command. The private code is visible upon request by prospecting employers.</p>
                     <br><br>
                     <h1>Future Plans</h1>
                     <p>While I prefer to work with simpler and lower level technologies, I do want to practice and advertise my skill with newer, fancier tech. At some point I will redesign the site using a modern stack and make the copy available beside this one, and it will use technology such as React, Node.js, and other such modern tooling.</p>
                     <br>
-                    <p>For now though, my interest is in the simpler tools, because I believe that a firm foundational knowledge is more important than knowing the modern tooling. Making things work from scratch by getting your hands dirty is what I love, and will hopefully be more useful than learning a new framework that may or may not be relevant ten years from now.</p>
+                    <p>For now though, my interest is in the simpler tools, because I believe that a firm foundational knowledge is more important than knowing modern tooling. Making things work from scratch by getting your hands dirty is what I love, and will hopefully be more useful than learning a new framework that may or may not be relevant ten years from now.</p>
                 </div>
             </div>
 
