@@ -3,6 +3,7 @@
 <header>
     <nav id="navList">
         <ul>
+            <li class="headerLogo">Brad Dial</li>
             <li class="headerItem"><a href="/">Home</a></li>
             <li class="headerItem"><a href="/blog">Blog</a></li>
             <li class="headerItem"><a href="/app">Apps</a></li>

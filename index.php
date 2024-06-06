@@ -7,14 +7,24 @@
         <meta name="description" content="Landing page; about Brad Dial">
         <link rel="stylesheet" href="/css/default.css">
         <title>Brad Dial - The Website</title>
+        <style>
+            #whoAmBlock {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                width: 90%;
+                margin: auto;
+            }
+        </style>
     </head>
     <body>
         <div class="page">
         <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteHeader.php'; ?>
 
             <div class="content">
-                <h2>Who am I?</h2>
-                <p>I'm Bradley Dial, aspiring web developer and recent graduate from Pellissippi State Community College in Knoxville, Tennessee. I have a burning passion for creating functional and optimized systems, and a lukewarm passion for sleek and modern visual design.</p>
+                <h2><img src="/assets/images/brad_profile.jpeg" alt="Portrait picture of Brad Dial" style="float: right;width: 25%;min-width: 200px;margin-left: 4%;border-style: ridge;border_width: 1px;border-color: grey;">Who am I?</h2>
+                <p>I'm Bradley Dial, aspiring web developer and recent graduate from Pellissippi State Community College in Knoxville, Tennessee. I have a burning passion for creating functional and optimized systems, and a lukewarm passion for sleek and modern visual design.</img></p>
                 <br><br>
                 <h2>About the Site</h2>
                 <p>This website was (and is being) constructed for the purpose of showing my skills and abilities in my own corner of the internet. This site is intended to be a supplement to my resume and LinkedIn profile, to provide as complete of a picture as possible into what I offer a company or organization.</p>
