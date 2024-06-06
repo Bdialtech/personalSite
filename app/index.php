@@ -13,25 +13,18 @@
         <div class="page">
         <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteHeader.php'; ?>
             <div class="content">
-               
-
+                
                 <p style="font-style: italic; text-align: center;">All apps will open in a new tab</p>
-                <table class="appList">
-                    <tr>
-                        <th></th>
-                        <th>App</th>
-                        <th>Description</th>
-                        <th>Commissioner</th>
-                        <th>Initial Build Date</th>
-                    </tr>
-                    <tr>
-                        <td><button type="button" class="appLauncher" onclick='window.open("/app/rimcalc", "_blank");'>Launch</button></td>
-                        <td>RimCalc</td>
-                        <td>A simple weekly value tracker for RimWorld</td>
-                        <td>RJ Carter</td>
-                        <td>August 2023</td>
-                    </tr>
-                </table>
+                <br><br>
+
+                <div class="appListing">
+                    <img src="/assets/appThumbnails/rimCalc.png" alt="Thumbnail for the RimCalc app" onclick='window.open("/app/rimcalc", "_blank");'></img>
+                    <div class="appDesc">
+                        <h1><a href="/app/rimcalc" target="_blank">RimCalc</a></h1>
+                        <h2>August 2023</h2>
+                        <p>Simple value tracker with weekly stepping, forward and backward, for the popular video game, Rimworld. Commisioned by RJ Carter.</p>
+                    </div>
+                </div>
 
             </div>
 
