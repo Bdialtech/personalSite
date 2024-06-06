@@ -1,21 +1,61 @@
-.blogEntry {
-    width: 90%;
-    margin: auto;
+.blogInterface {
+    display: flex;
+    height: 100%;
+    width: 100%;
 }
 
-.blogEntry h1 {
+.blogPanel {
+    border-right: 2px solid black;
+    flex: 1;
+    padding: 1.5%;
+}
+.blogPanel form {
+    font-size: 0.9em;
+}
+#submit {
+    margin: auto;
+    width: 80%;
+}
+
+.blogNavigation {
+    flex: 1;
+}
+.blogNavigation p {
+    text-align: center;
+    font-size: 0.75em;
+}
+.blogNavigation ul {
+    list-style: none;
+    text-align: center;
+    padding-right: 35px;
+    margin-bottom: 10px;
+}
+.blogNavigation li {
+    display: inline-block;
+}
+
+.blogView {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.blogText {
+    flex: 9;
+    padding: 2.5%;
+}
+.blogText h1 {
     font-style: italic;
+    font-size: 1.5em;
     border: 0px solid black;
     border-bottom-width: 2px;
     margin-bottom: 0px;
 }
-
-.blogEntry h2 {
-    font-size: larger;
+.blogText h2 {
+    font-size: 1em;
     margin: 5px 0px;
 }
-
-.blogEntry p {
+.blogText p {
     width: 90%;
     margin: auto;
 }

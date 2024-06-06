@@ -1,24 +1,67 @@
-.appList {
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
-    min-width: 80%;
-    margin: auto;
-    margin-top: 2%;
+.appListing {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0,0,0,0.05);
+    min-height: 200px;
+    align-items: center;
+    padding: 0.5% 1% 0.5% 1%;
 }
 
-.appList th {
-    background-color: lightgray;
-    border-bottom: 1px solid black;
+.appDesc {
+    padding: 1% 1% 1% 3%;
 }
 
-.appList td {
-    background-color: rgb(245, 245, 245);
-    border-right: 1px solid black;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.appDesc h1 {
+    width: fit-content;
+    padding: 2px;
+    background-color: rgb(187, 201, 206);
+    border-radius: 10px;
+    border-style: outset;
+    border-width: 2px;
 }
 
-.appLauncher {
-    font-size: medium;
+.appDesc a:link, .appDesc a:visited, .appDesc a:hover, .appDesc a:active {
+    text-decoration: underline;
+    color: black;
+}
+
+.appDesc h2 {
+    font-style: italic;
+}
+
+.appListing img {
+    display: flex;
+    cursor: pointer;
+    border-style: solid;
+    border-color: rgb(50, 65, 70);
+    border-width: 5px;
+    max-height: 200px;
+    max-width: 95%;
+}
+
+@media screen and (max-width: 768px) {
+    .appListing {
+        flex-direction: column;
+    }
+
+    .appDesc {
+        text-align: center;
+    }
+
+    .appDesc h1 {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .appListing {
+        flex-direction: row;
+    }
+
+    .appDesc {
+        text-align: left;
+    }
+
+    
 }

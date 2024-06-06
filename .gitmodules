@@ -1,0 +1,3 @@
+[submodule "restricted"]
+	path = restricted
+	url = https://github.com/Bdialtech/personalSiteSQLCode.git
