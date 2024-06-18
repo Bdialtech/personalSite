@@ -5,6 +5,8 @@ picture img{
     float: right;
     width: 25%;
     min-width: 180px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .landingPage h1 {

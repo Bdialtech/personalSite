@@ -18,7 +18,11 @@
                 <br><br>
 
                 <div class="appListing">
-                    <img src="/assets/appThumbnails/rimCalc.png" alt="Thumbnail for the RimCalc app" onclick='window.open("/app/rimcalc", "_blank");'></img>
+                    <picture>
+                        <source media="(min-width: 769px)" srcset="/assets/appThumbnails/rimCalc_desktop.webp">
+                        <source media="(max-width: 768px)" scrset="/assets/appThumbnails/rimCalc_mobile.webp">
+                        <img src="/assets/appThumbnails/rimCalc_mobile.webp" alt="Thumbnail for the RimCalc app" onclick='window.open("/app/rimcalc", "_blank");'>
+                    </picture>
                     <div class="appDesc">
                         <h1><a href="/app/rimcalc" target="_blank">RimCalc</a></h1>
                         <h2>August 2023</h2>
