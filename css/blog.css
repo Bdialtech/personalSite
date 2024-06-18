@@ -17,6 +17,24 @@
     width: 80%;
 }
 
+@media screen and (max-width: 768px) {
+    .blogInterface {
+        flex-direction: column;
+    }
+    .blogPanel {
+        border-right-width: 0px;
+        border-bottom: 2px solid black;
+    }
+    .blogPanel p, .blogPanel #submit {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+    #submit {
+        min-height: 30px;
+    }
+}
+
 .blogNavigation {
     flex: 1;
 }

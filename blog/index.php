@@ -59,7 +59,7 @@
                         <div class="blogNavigation">
                             <ul>
                                 <li><button <?php if ($currentPage <= 1) echo "disabled"; ?> onclick="window.location.href = '../blog/index.php?page=1'">First</button></li>
-                                <li><button <?php if ($currentPage <= 1) echo "disabled"; ?> onclick="window.location.href = '../blog/index.php?page=<?php echo $currentPage - 1;?>'">Previous</button></li>
+                                <li><button <?php if ($currentPage <= 1) echo "disabled"; ?> onclick="window.location.href = '../blog/index.php?page=<?php echo $currentPage - 1;?>'">Prev</button></li>
                                 <li><button <?php if ($currentPage >= $totalPages) echo "disabled"; ?> onclick="window.location.href = '../blog/index.php?page=<?php echo $currentPage + 1; ?>'">Next</button></li>
                                 <li><button <?php if ($currentPage >= $totalPages) echo "disabled"; ?> onclick="window.location.href = '../blog/index.php?page=<?php echo $totalPages; ?>'">Last</button></li>
                             </ul>
