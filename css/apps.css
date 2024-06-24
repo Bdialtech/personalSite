@@ -31,8 +31,9 @@
 
 .appListing picture {
     display: flex;
-    max-height: 200px;
+    height: auto;
     min-width: 33%;
+    max-width: 100%;
 }
 
 .appListing img {

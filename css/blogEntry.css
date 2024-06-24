@@ -1,5 +1,6 @@
 .content {
     width: 50%;
+    max-width: 75ch;
 }
 
 @media screen and (max-width: 768px) {
