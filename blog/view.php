@@ -1,13 +1,24 @@
 <?php
-    if (isset($_GET['query'])) {
-        require $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLconnect.php';
+    $FAIL_TO_VIEW = false;
 
-        $ENTRY_ID = $_GET['query'];
+    require $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLconnect.php';
+
+    if (!isset($_GET['query'])) {
+          $FAIL_TO_VIEW = true;
     }
-    else {
+
+    $INT_CAST_QUERY = (int) $_GET['query'];
+    require $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLblogGetCount.php';
+    if ($INT_CAST_QUERY > $entryCount || $INT_CAST_QUERY <= 0) {
+        $FAIL_TO_VIEW = true;
+    }
+
+    if ($FAIL_TO_VIEW == true) {
         header("Location: ../blog/index");
         exit;
     }
+
+    $ENTRY_ID = $INT_CAST_QUERY;
 ?>
 
 
