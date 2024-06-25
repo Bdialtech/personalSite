@@ -21,10 +21,10 @@
                     <picture>
                         <source media="(min-width: 769px)" srcset="/assets/appThumbnails/rimCalc_desktop.webp">
                         <source media="(max-width: 768px)" scrset="/assets/appThumbnails/rimCalc_mobile.webp">
-                        <img src="/assets/appThumbnails/rimCalc_mobile.webp" alt="Thumbnail for the RimCalc app" onclick='window.open("rimcalc", "_blank");'>
+                        <img src="/assets/appThumbnails/rimCalc_mobile.webp" alt="Thumbnail for the RimCalc app" onclick='window.open("rimcalc.html", "_blank");'>
                     </picture>
                     <div class="appDesc">
-                        <h1><a href="rimcalc" target="_blank">RimCalc</a></h1>
+                        <h1><a href="rimcalc.html" target="_blank">RimCalc</a></h1>
                         <h2>August 2023</h2>
                         <p>Simple value tracker with weekly stepping, forward and backward, for the popular video game, Rimworld. Commisioned by RJ Carter.</p>
                     </div>
