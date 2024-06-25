@@ -15,6 +15,6 @@
             <li class="headerItem" style="display: block;"><a href="/">About Me</a></li>
             <li class="headerItem" style="display: block;"><a href="/blog">Blog</a></li>
             <li class="headerItem" style="display: block;"><a href="/app">Apps</a></li>
-            </ul>
+        </ul>
     </nav>
 </header>

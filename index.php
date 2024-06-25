@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Landing page; about Brad Dial">
         <link rel="stylesheet" href="/css/default.css">
+        <link rel="stylesheet" href="/css/landing.css">
         <title>Brad Dial - The Website</title>
     </head>
     <body>
@@ -14,8 +15,13 @@
 
             <div class="content">
                 <div class="landingPage">
-                    <h1><img src="/assets/images/brad_profile.jpeg" alt="Portrait picture of Brad Dial" style="float: right;width: 25%;min-width: 200px;margin-left: 4%;border-style: ridge;border_width: 1px;border-color: grey;">Who am I?</h1>
-                    <p>I'm Bradley Dial, aspiring web developer and recent graduate from Pellissippi State Community College in Knoxville, Tennessee. I have a burning passion for creating functional and optimized systems, and a lukewarm passion for sleek and modern visual design.</img></p>
+                    <picture>
+                        <source media="(min-width: 769px)" srcset="/assets/images/brad_profile_desktop.webp">
+                        <source media="(max-width: 768px)" scrset="/assets/images/brad_profile_mobile.webp">
+                        <img src="/assets/images/brad_profile_mobile.webp" alt="Portrait picture of Brad Dial">
+                    </picture>
+                    <h1>Who am I?</h1>
+                    <p>I'm Bradley Dial, aspiring web developer and recent graduate from Pellissippi State Community College in Knoxville, Tennessee. I have a burning passion for creating functional and optimized systems, and a lukewarm passion for sleek and modern visual design.</p>
                     <br><br>
                     <h1>About the Site</h1>
                     <p>This website was (and is being) constructed for the purpose of showing my skills and abilities in my own corner of the internet. This site is intended to be a supplement to my resume and LinkedIn profile, to provide as complete of a picture as possible into what I offer a company or organization.</p>
