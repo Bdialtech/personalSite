@@ -32,6 +32,12 @@ header {
     font-weight: bold;
 }
 
+.headerIcon {
+    display: inline-block;
+    position: relative;
+    top: 6px;
+}
+
 .headerItem a:link, .headerItem a:visited, .headerItem a:hover, .headerItem a:active {
     text-decoration: none;
     color: white;

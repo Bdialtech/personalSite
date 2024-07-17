@@ -6,7 +6,9 @@
             <li class="headerLogo">Brad Dial</li>
             <li class="headerItem"><a href="/">Home</a></li>
             <li class="headerItem"><a href="/blog">Blog</a></li>
-            <li class="headerItem"><a href="/app">Apps</a></li>
+            <li class="headerItem"><a href="/app">Projects</a></li>
+            <li class="headerIcon"><a href="https://www.linkedin.com/in/bdialtech" target="_blank"><img src="/assets/icons/linkedinIcon.png"></a></li>
+            <li class="headerIcon"><a href="https://github.com/Bdialtech" target="_blank"><img src="/assets/icons/githubIcon.png"></a></li>
         </ul>
     </nav>
     <button class="headerItem" id="navMenuButton" onclick="toggleDropdownVisibility();"></button>

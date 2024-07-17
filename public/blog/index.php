@@ -14,7 +14,7 @@
             <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteHeader.php'; ?>
 
             <?php 
-                include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLconnect.php';
+                include $_SERVER['DOCUMENT_ROOT'].'../../restricted/SQLconnect.php';
 
                 $currentPage = 1;
                 if (isset($_GET['page'])) {
@@ -22,7 +22,7 @@
                 }
 
                 $totalPages = 1;
-                include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLblogCalcPageCount.php';
+                include $_SERVER['DOCUMENT_ROOT'].'../../restricted/SQLblogCalcPageCount.php';
             ?>
 
             <div class="content">       
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="blogText">
-                            <?php include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLblogRenderEntries.php'; ?>
+                            <?php include $_SERVER['DOCUMENT_ROOT'].'../../restricted/SQLblogRenderEntries.php'; ?>
                         </div>
                     </div>
                 </div>

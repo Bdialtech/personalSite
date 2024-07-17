@@ -20,7 +20,5 @@ RewriteRule ^(.*)$ 404.php [L]
 
 # Forbid sensitive files and directories
 # !!!Holy moly do not leave this rule commented on deploy!!!
-RewriteRule ^restricted/ - [F]
-RewriteRule ^objects/ - [F]
 RewriteRule ^\.git/ - [F]
 RewriteRule ^\.gitignore$ - [F]

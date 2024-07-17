@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <?php $lastModify = filemtime(__FILE__); ?>
         <meta charset="utf-8">
         <title>Rimworld Resource Calculator</title>
         <style>
