@@ -1,22 +1,22 @@
 <link rel="stylesheet" href="/css/header.css">
 <script src="/js/siteHeader.js"></script>
 <header>
-    <nav id="navList">
-        <ul>
-            <li class="headerLogo">Brad Dial</li>
-            <li class="headerItem"><a href="/">Home</a></li>
-            <li class="headerItem"><a href="/blog">Blog</a></li>
-            <li class="headerItem"><a href="/app">Projects</a></li>
-            <li class="headerIcon"><a href="https://www.linkedin.com/in/bdialtech" target="_blank"><img src="/assets/icons/linkedinIcon.png"></a></li>
-            <li class="headerIcon"><a href="https://github.com/Bdialtech" target="_blank"><img src="/assets/icons/githubIcon.png"></a></li>
-        </ul>
-    </nav>
-    <button class="headerItem" id="navMenuButton" onclick="toggleDropdownVisibility();"></button>
+    <div id="headerContent">
+        <button class="headerItem" id="navMenuButton" onclick="toggleDropdownVisibility();"></button>
+        <h1 class="headerLogo">Brad Dial</h1>
+        <nav id="navList">
+            <a class="headerItem" href="/">Home</a>
+            <a class="headerItem" href="/blog">Blog</a>
+            <a class="headerItem" href="/app">Projects</a>
+        </nav>
+        <nav id="socials">
+            <a class="headerIcon" href="https://www.linkedin.com/in/bdialtech" target="_blank"><img src="/assets/icons/linkedinIcon.png"></a>
+            <a class="headerIcon" href="https://github.com/Bdialtech" target="_blank"><img src="/assets/icons/githubIcon.png"></a>
+        </nav>
+    </div>
     <nav id="dropdownNavList">
-        <ul>
-            <li class="headerItem" style="display: block;"><a href="/">Home</a></li>
-            <li class="headerItem" style="display: block;"><a href="/blog">Blog</a></li>
-            <li class="headerItem" style="display: block;"><a href="/app">Apps</a></li>
-        </ul>
+        <a class="headerItem" style="display: block;" href="/">Home</a>
+        <a class="headerItem" style="display: block;" href="/blog">Blog</a>
+        <a class="headerItem" style="display: block;" href="/app">Apps</a>
     </nav>
 </header>

@@ -14,7 +14,7 @@ header {
     display: inline-block;
     position: relative;
     cursor: default;
-    margin: 0.2rem 20px;
+    margin: 0.2rem 0px 0.2rem 20px;
     text-shadow: black 3px 3px;
     font-size: 2em;
     font-weight: bold;
@@ -38,7 +38,7 @@ header {
     top: 6px;
 }
 
-.headerItem a:link, .headerItem a:visited, .headerItem a:hover, .headerItem a:active {
+.headerItem:link, .headerItem:visited, .headerItem:hover, .headerItem:active {
     text-decoration: none;
     color: white;
 }
@@ -50,30 +50,11 @@ header {
     animation-direction: alternate;
 }
 
-#dropdownNavList {
-    display: none;
-    margin: 0px auto;
-    width: 100vw;
-}
-
-#dropdownNavList ul, li {
-    margin: 0px auto;
-    padding: 0;
-    max-width: 100%;
-    text-align: center;
-}
-
-#dropdownNavList ul {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: rgba(0,0,0,0.15);
-}
-
-#dropdownNavList li {
-    padding: 10px;
-    background-color: rgba(0,0,0,0.15);
-    width: fit-content;
-    border: 1px solid rgba(255,255,255,0.15);
+#headerContent {
+    display: flex;
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+    width: 90%;
 }
 
 #navMenuButton {
@@ -85,6 +66,34 @@ header {
     margin: 3px;
     background: url(/assets/icons/menuIcon.png);
     border: 0px;
+}
+
+#navList {
+    display: inline-block;
+}
+
+#socials {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin-left: auto;
+    margin-right: 5%;   
+}
+
+#dropdownNavList {
+    display: none;
+    margin: 0px auto;
+    width: 100vw;
+}
+
+#dropdownNavList a {
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.15);
+    width: fit-content;
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
 @keyframes hoverBob {
