@@ -4,11 +4,11 @@
         $inputBody = $_POST['body'];
         $inputPass = $_POST['pass'];
 
-        include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLconnect.php';
+        include $_SERVER['DOCUMENT_ROOT'].'../../restricted/SQLconnect.php';
 
-        include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLblogUpload.php';
+        include $_SERVER['DOCUMENT_ROOT'].'../../restricted/SQLblogUpload.php';
 
-        include $_SERVER['DOCUMENT_ROOT'].'/restricted/SQLdisconnect.php';
+        include $_SERVER['DOCUMENT_ROOT'].'../../restricted/SQLdisconnect.php';
 
         echo "<script>
                 setTimeout(function() {

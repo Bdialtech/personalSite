@@ -31,7 +31,7 @@
                     <br>
                     <p>In this case, specifically, the stack is Linux (Ubuntu), Apache, MySQL, and PHP. The web server is hosted remotely on an AWS Lightsail Ubuntu machine, and the codebase is hosted on GitHub for version control and rapid deployment, as most production happens on a separate development environment.</p>
                     <br>
-                    <p>Although security isn't exactly a business-critical risk factor for my personal blog site, I have taken basic measures. Despite the codebase being largely public (available <a href="https://github.com/Bdialtech/personalSite/tree/main">here</a>), there are some particular safety precautions I took when implementing my site's database. For example, all MySQL implementation code has been encapsulated into a private Git submodule - the /restricted directory - and then re-injected using PHP's include command. The private code is visible upon request by prospecting employers.</p>
+                    <p>The source code for the site is available <a href="https://github.com/Bdialtech/personalSite/tree/main">here</a>. Database code is restricted viewing for site security reasons, but is available upon request.</p>
                     <br><br>
                     <h1>Future Plans</h1>
                     <p>While I prefer to work with simpler and lower level technologies, I do want to practice and advertise my skill with newer, fancier tech. At some point I will redesign the site using a modern stack and make the copy available beside this one, and it will use technology such as React, Node.js, and other such modern tooling.</p>
