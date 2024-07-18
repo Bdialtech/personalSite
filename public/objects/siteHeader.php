@@ -10,13 +10,14 @@
             <a class="headerItem" href="/app">Projects</a>
         </nav>
         <nav id="socials">
-            <a class="headerIcon" href="https://www.linkedin.com/in/bdialtech" target="_blank"><img src="/assets/icons/linkedinIcon.png"></a>
-            <a class="headerIcon" href="https://github.com/Bdialtech" target="_blank"><img src="/assets/icons/githubIcon.png"></a>
+            <a class="headerIcon" href="https://www.linkedin.com/in/bdialtech" target="_blank"><img src="/assets/icons/linkedinIcon.png" alt="LinkedIn Icon"></a>
+            <a class="headerIcon" href="https://github.com/Bdialtech" target="_blank"><img src="/assets/icons/githubIcon.png" alt="GitHub Icon"></a>
+            <a class="headerIcon" href="https://www.youtube.com/@bdialtech" target="_blank"><img src="/assets/icons/youtubeIcon.png" alt="YouTube Icon"></a>
         </nav>
     </div>
     <nav id="dropdownNavList">
         <a class="headerItem" style="display: block;" href="/">Home</a>
         <a class="headerItem" style="display: block;" href="/blog">Blog</a>
-        <a class="headerItem" style="display: block;" href="/app">Apps</a>
+        <a class="headerItem" style="display: block;" href="/app">Projects</a>
     </nav>
 </header>
