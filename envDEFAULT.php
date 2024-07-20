@@ -5,4 +5,6 @@
     $envDBname = "";
 
     $envDebug = FALSE;
+
+    $blogUploadPassword = "";
 ?>
