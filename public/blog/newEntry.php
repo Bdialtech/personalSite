@@ -16,10 +16,12 @@
                 <form action="uploadBlogEntry.php" method="post">
                     <label for="title">Title</label><br>
                     <input type="textbox" id="title" name="title" size="50" maxlength="256" required><br>
+                    <label for="desc">Description</label><br>
+                    <input type="textbox" id="desc" name="desc" size="50" maxlength="256" required><br>
                     <label for="body">Body</label><br>
                     <textarea id="body" name="body" rows="16" cols="75" required></textarea><br>
                     <label for="pass">Password</label><br>
-                    <input type="password" id="pass" name="pass" size="100" maxLength="256" required><br>
+                    <input type="password" id="pass" name="pass" size="256" maxLength="512" required><br>
                     <input type="submit" value="Upload">
                 </form>
             </div>
