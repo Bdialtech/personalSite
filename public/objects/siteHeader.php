@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/header.css">
-<script src="/js/siteHeader.js"></script>
+<script src="/js/siteHeader.js" defer></script>
 <header>
     <div id="headerContent">
         <button class="headerItem" id="navMenuButton" onclick="toggleDropdownVisibility();"></button>

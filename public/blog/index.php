@@ -1,3 +1,5 @@
+<?php require $_SERVER['DOCUMENT_ROOT'].'../../restricted/SQLblogQueryFunctions.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,9 +13,8 @@
     </head>
     <body>
         <div class="page">
-            <?php include $_SERVER['DOCUMENT_ROOT'].'/objects/siteHeader.php'; ?>
-
             <?php 
+                include $_SERVER['DOCUMENT_ROOT'].'/objects/siteHeader.php';
                 include $_SERVER['DOCUMENT_ROOT'].'../../restricted/SQLconnect.php';
 
                 $currentPage = 1;
@@ -21,8 +22,8 @@
                     $currentPage = htmlspecialchars($_GET['page']);
                 }
 
-                $totalPages = 1;
-                include $_SERVER['DOCUMENT_ROOT'].'../../restricted/SQLblogCalcPageCount.php';
+                $entriesPerPage = 5;
+                $totalPages = ceil(getCountOfEntries($conn) / $entriesPerPage);
             ?>
 
             <div class="content">       
@@ -67,7 +68,7 @@
                         </div>
 
                         <div class="blogText">
-                            <?php include $_SERVER['DOCUMENT_ROOT'].'../../restricted/SQLblogRenderEntries.php'; ?>
+                            <?php renderBlogEntrySamples($currentPage, $entriesPerPage, $conn); ?>
                         </div>
                     </div>
                 </div>
